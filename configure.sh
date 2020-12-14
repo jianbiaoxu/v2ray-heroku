@@ -17,18 +17,22 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     "inbounds": [
         {
             "port": $PORT,
-            "protocol": "vmess",
+            "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "$UUID",
-                        "alterId": 64
                     }
                 ],
                 "disableInsecureEncryption": true
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "ws",
+                "security": "none",
+                "wsSettings": {
+                    "path": "/less/search"
+                }
+
             }
         }
     ],
