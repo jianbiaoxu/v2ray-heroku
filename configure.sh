@@ -16,24 +16,20 @@ cat << EOF > /usr/local/etc/v2ray/config.json
 {
     "inbounds": [
         {
+            "port": $PORT,
             "protocol": "vless",
-    "settings": {
-      "clients": [
-        {
-          "id": "9dbf615a-d05b-45d6-a910-18cdbd3b71f7",
-          "level": 0
-        }
-      ],
-      "decryption": "none"
-    },
-        "streamSettings": {
-          "network":"ws",
-          "security": "none",
-          "wsSettings": {
-                  "path": "/"
-          }
-        }
-  }
+            "settings": {
+                "clients": [
+                    {
+                        "id": "$UUID",
+                        "level": 0
+                    }
+                ],
+                "disableInsecureEncryption": true
+            },
+            "streamSettings": {
+                "network": "ws"
+            }
         }
     ],
     "outbounds": [
