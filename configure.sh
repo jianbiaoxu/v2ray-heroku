@@ -25,7 +25,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                         "level": 0
                     }
                 ],
-                "disableInsecureEncryption": true
+                "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws"
