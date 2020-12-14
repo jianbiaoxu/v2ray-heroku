@@ -21,7 +21,8 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "$UUID"
+                        "id": "$UUID",
+                        "level": 0
                     }
                 ],
                 "disableInsecureEncryption": true
@@ -29,10 +30,9 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             "streamSettings": {
                 "network": "ws",
                 "security": "none",
-                "wsSettings": {
-                    "path": "/less/search"
-                }
-
+          "wsSettings": {
+                  "path": "/less/search"
+          }
             }
         }
     ],
